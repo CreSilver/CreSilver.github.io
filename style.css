@@ -14,12 +14,14 @@ body{
     height: 100vh;
     object-fit: cover;
 }
-
-
+h1{text-shadow: 1px 1px 1px black;}
+.SecondSection{margin-top: 35vh;}
+section h2{text-align: center;}
 section{
     position: relative;
     overflow: hidden;
 }
+
 
 
 .MainSection{
@@ -40,14 +42,8 @@ section{
     margin: -3rem 0 0 50%;
     transform:translateX(-50%);
 }
-h1{text-shadow: 1px 1px 1px black;}
-
-.SecondSection{margin-top: 35vh;}
 
 
-
-
-section h2{text-align: center;}
 
 
 .space-for-container{
@@ -101,6 +97,7 @@ section h2{text-align: center;}
 
 
 
+
 .art-light{
     background: rgb(225, 225, 225);
     color: rgb(24, 24, 24);
@@ -133,7 +130,7 @@ section h2{text-align: center;}
     width: 130vw;
     margin-left: -1rem;
     height: 1rem;
-    background: #2d844c;;
+    background: #2d844c;
     rotate: -1deg;
 }
 .line-white-rotate{
