@@ -16,9 +16,10 @@ body{
 }
 
 
-
-
-
+section{
+    position: relative;
+    overflow: hidden;
+}
 
 
 .MainSection{
@@ -115,7 +116,7 @@ section h2{text-align: center;}
 
 
 .line-green{
-    overflow-x: hidden;
+    overflow: hidden;
     position: absolute;
     z-index: 10;
     width: 130vw;
@@ -126,7 +127,7 @@ section h2{text-align: center;}
     rotate: -1deg;
 }
 .line-green2{
-    overflow-x: hidden;
+    overflow: hidden;
     position: absolute;
     z-index: 10;
     width: 130vw;
@@ -136,17 +137,17 @@ section h2{text-align: center;}
     rotate: -1deg;
 }
 .line-white-rotate{
-    overflow-x: hidden;
+    overflow: hidden;
     position: absolute;
     width: 130vw;
     margin-left: -1rem;
-    margin-top: -0.5rem;
+    margin-top: -0.8rem;
     height: 1.5rem;
     background: rgb(225, 225, 225);
     rotate: -1deg;
 }
 .line-dark-rotate{
-    overflow-x: hidden;
+    overflow: hidden;
     position: absolute;
     width: 130vw;
     margin-left: -1rem;
