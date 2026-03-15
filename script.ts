@@ -12,7 +12,7 @@ function changeHeaderViaScroll(){
 
         window.addEventListener("scroll", ()=>{ // scroll event
             let scroll_pos = window.scrollY;
-            // Vhange header styl
+            // Change header styl
             if(scroll_pos>0){header.classList.add("scrl-header")}
             else(header.classList.remove("scrl-header"))
             // Hide header
@@ -24,6 +24,21 @@ function changeHeaderViaScroll(){
     }
 }
 
+function visibilityList(){
+    let list = document.getElementById("nav2")
+    let bnt = document.getElementById("btn-list")
 
+    if(list && bnt){
+        bnt.addEventListener("click", ()=>{
+            // "toggle" changing between "add" and "remove"
+            list.classList.toggle("vissible")
+            list.classList.toggle("notvissible")
+
+        })
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", visibilityList);
 document.addEventListener("DOMContentLoaded", changeYearText);
 document.addEventListener("DOMContentLoaded", changeHeaderViaScroll);
