@@ -86,6 +86,7 @@ section{
     background: #2d844c;
     padding: 1rem;
     transition: all 0.3s;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .container a:hover{
     background: rgb(24, 24, 24);

@@ -59,6 +59,7 @@ header .nav2 li a{
     color: rgb(225, 225, 225);
     padding: 1rem 1rem 1rem 1rem;
     border-radius: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     background:#2d844c;
     transition: all 0.3s;
 }
