@@ -6,7 +6,7 @@ function changeYearText() {
 }
 function changeHeaderViaScroll() {
     let header = document.getElementById("header");
-    let list = document.getElementById("nav2");
+    let list = document.getElementById("nav2"); // set navlist
     if (header && list) {
         let lastScrollY = window.scrollY; // set last-scroll
         window.addEventListener("scroll", () => {
@@ -49,6 +49,15 @@ function backToTop() {
         });
     }
 }
+function zonerYears() {
+    let text = document.getElementById("Zoner-years");
+    let year = new Date().getFullYear();
+    if (text) {
+        year -= 2023;
+        text.innerText = year.toString();
+    }
+}
+document.addEventListener("DOMContentLoaded", zonerYears);
 document.addEventListener("DOMContentLoaded", backToTop);
 document.addEventListener("DOMContentLoaded", visibilityList);
 document.addEventListener("DOMContentLoaded", changeYearText);

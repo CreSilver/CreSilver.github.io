@@ -8,6 +8,7 @@ header{
 }
 header span{margin-top: 1rem;color:rgb(225, 225, 225)}
 header .nav1{
+    overflow: hidden;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -35,6 +36,7 @@ header .nav1 li:hover button{font-weight: 700;}
 
 
 header .nav2{
+    overflow: hidden;
     background: rgb(225, 225, 225);
     list-style: none;
     position: absolute;

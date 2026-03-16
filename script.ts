@@ -5,11 +5,12 @@ function changeYearText(){
     }
 }
 
+
 function changeHeaderViaScroll(){
     let header = document.getElementById("header")
-    let list = document.getElementById("nav2")
+    let list = document.getElementById("nav2") // set navlist
 
-    if(header){
+    if(header && list){
         let lastScrollY: number = window.scrollY; // set last-scroll
 
         window.addEventListener("scroll", ()=>{ // scroll event
@@ -18,12 +19,10 @@ function changeHeaderViaScroll(){
             if(scroll_pos>0){header.classList.add("scrl-header")}
             else(header.classList.remove("scrl-header"))
             // Hide header
-            if(lastScrollY < scroll_pos && scroll_pos !> 350){
+            if(lastScrollY < scroll_pos && scroll_pos > 350){
                 header.classList.add("header-hidden")
-                if(list){ // In navbar exist -> hide navbar
-                    list.classList.remove("vissible")
-                    list.classList.add("notvissible")
-                }
+                list.classList.remove("vissible")
+                list.classList.add("notvissible")
             }
             else{header.classList.remove("header-hidden")}
 
@@ -31,6 +30,7 @@ function changeHeaderViaScroll(){
         })
     }
 }
+
 
 function visibilityList(){
     let list = document.getElementById("nav2")
@@ -46,6 +46,7 @@ function visibilityList(){
     }
 }
 
+
 function backToTop(){
     let bnt = document.getElementById("backtotop")
 
@@ -56,6 +57,20 @@ function backToTop(){
     }
 }
 
+
+
+function zonerYears(){
+    let text = document.getElementById("Zoner-years");
+    let year = new Date().getFullYear()
+
+    if(text){
+        year -= 2023
+        text.innerText = year.toString();
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", zonerYears);
 document.addEventListener("DOMContentLoaded", backToTop);
 document.addEventListener("DOMContentLoaded", visibilityList);
 document.addEventListener("DOMContentLoaded", changeYearText);

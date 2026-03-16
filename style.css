@@ -97,6 +97,12 @@ section{
 .container a:hover{
     background: rgb(24, 24, 24);
 }
+.art-empty .p{
+    color: rgb(225, 225, 225);
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    padding-bottom: 4rem;
+}
 
 
 
@@ -104,7 +110,7 @@ section{
 .art-light{
     background: rgb(225, 225, 225);
     color: rgb(24, 24, 24);
-    padding: 1rem 8vw 1rem 8vw;
+    padding: 1.2rem 8vw 1.2rem 8vw;
 }
 .art-light img{
     z-index: 11;
@@ -114,7 +120,7 @@ section{
 .art-dark{
     background: rgb(24, 24, 24);
     color: rgb(225, 225, 225);
-    padding: 1rem 8vw 1rem 8vw;
+    padding: 2rem 8vw 2rem 8vw;
 }
 
 
@@ -172,14 +178,76 @@ section{
 
 
 
+.github_art{color: rgb(225, 225, 225);}
+.github_art a{
+    color: rgb(225, 225, 225);
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    background: #2d844c;
+    transition: all 0.3s;
+}
+.github_art a:hover{
+    color: rgb(24, 24, 24);
+    background: rgb(225, 225, 225);
+}
+.galery{color: rgb(24, 24, 24);}
+.galery{text-align: right;}
+.galery a{
+    color: rgb(225, 225, 225);
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    background: #2d844c;
+    transition: all 0.3s;
+}
+.galery a:hover{
+    background: rgb(24, 24, 24);
+}
+
+
+
+
 
 /* pc/mobile */
+@media(min-width:957px){
+    .galery{
+        padding: 2rem 20rem 4rem 8vw;
+        background: url(image/photo-camera-3146818425.png), -webkit-linear-gradient(180deg, #ffffff 40%, rgb(225, 225, 225) 60%), linear-gradient(270deg, #ffffff 40%, rgb(225, 225, 225) 60%);
+        background-size:contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    .github_art{
+        padding: 2rem 8vw 4rem 18rem;
+        background: url(image/github_PNG40-1417037603.png), -webkit-linear-gradient(0deg, #1b1f23 40%, rgb(24, 24, 24) 60%), linear-gradient(90deg, #1b1f23 40%, rgb(24, 24, 24) 60%);
+        background-size:contain;
+        background-position: left;
+        background-repeat: no-repeat;        
+    }
+}
 @media(min-width:600px){
     .art-light{display: flex;}
     .art-light img{max-height: 11rem;}
     .art-empty .cont-divider{
         min-width: 0.2rem;
         background: rgb(24, 24, 24);
+    }
+}
+
+
+@media(max-width:958px){
+    .galery{
+        padding: 2rem 8vw 4rem 8vw;
+        background: -webkit-linear-gradient(180deg, #ffffff 40%, rgb(225, 225, 225) 60%), linear-gradient(270deg, #ffffff 40%, rgb(225, 225, 225) 60%);;
+    }
+    .github_art{
+        padding: 2rem 8vw 4rem 8vw;
+        background: -webkit-linear-gradient(0deg, #1b1f23 40%, rgb(24, 24, 24) 60%), linear-gradient(90deg, #1b1f23 40%, rgb(24, 24, 24) 60%);;
     }
 }
 @media(max-width:601px){
