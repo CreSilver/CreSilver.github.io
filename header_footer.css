@@ -12,7 +12,8 @@ header .nav1{
     list-style: none;
     display: flex;
     justify-content: space-between;
-    width: 10rem;
+    min-width: 13rem;
+    max-width: 13rem;
 }
 header .nav1 li a{
     text-decoration: none;
