@@ -1,3 +1,4 @@
+html {scroll-behavior: smooth;}
 body{
     display: flex;
     flex-direction: column;
@@ -161,6 +162,11 @@ section{
     height: 3vw;
     background: rgb(24, 24, 24);
     rotate: -1deg;
+}
+.line-green-nonerotate{
+    height: 0.5rem;
+    width: 100%;
+    background: #2d844c;
 }
 
 

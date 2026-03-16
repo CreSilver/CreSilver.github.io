@@ -6,11 +6,12 @@ function changeYearText() {
 }
 function changeHeaderViaScroll() {
     let header = document.getElementById("header");
-    if (header) {
+    let list = document.getElementById("nav2");
+    if (header && list) {
         let lastScrollY = window.scrollY; // set last-scroll
         window.addEventListener("scroll", () => {
             let scroll_pos = window.scrollY;
-            // Vhange header styl
+            // Change header styl
             if (scroll_pos > 0) {
                 header.classList.add("scrl-header");
             }
@@ -19,6 +20,8 @@ function changeHeaderViaScroll() {
             // Hide header
             if (lastScrollY < scroll_pos && scroll_pos > 350) {
                 header.classList.add("header-hidden");
+                list.classList.remove("vissible");
+                list.classList.add("notvissible");
             }
             else {
                 header.classList.remove("header-hidden");
@@ -32,11 +35,21 @@ function visibilityList() {
     let bnt = document.getElementById("btn-list");
     if (list && bnt) {
         bnt.addEventListener("click", () => {
+            // "toggle" changing between "add" and "remove"
             list.classList.toggle("vissible");
             list.classList.toggle("notvissible");
         });
     }
 }
+function backToTop() {
+    let bnt = document.getElementById("backtotop");
+    if (bnt) {
+        bnt.addEventListener("click", () => {
+            window.scrollTo(0, 0);
+        });
+    }
+}
+document.addEventListener("DOMContentLoaded", backToTop);
 document.addEventListener("DOMContentLoaded", visibilityList);
 document.addEventListener("DOMContentLoaded", changeYearText);
 document.addEventListener("DOMContentLoaded", changeHeaderViaScroll);
