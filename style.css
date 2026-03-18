@@ -62,7 +62,7 @@ section{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 2rem 8vw 2rem 8vw;
+    padding: 2rem 6.75vw 2rem 6.75vw;
     color: rgb(225, 225, 225);
     text-align: center;
     z-index: -2;
