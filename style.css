@@ -15,7 +15,6 @@ body{
     height: 100vh;
     object-fit: cover;
 }
-button{cursor: pointer;}
 
 
 
@@ -24,6 +23,8 @@ button{cursor: pointer;}
 h1{text-shadow: 1px 1px 1px black;}
 .SecondSection{margin-top: 35vh;}
 section h2{text-align: center;}
+button{cursor: pointer;}
+.TextShadowBlack{text-shadow: 1px 1px 1px black;}
 section{
     position: relative;
     overflow: hidden;
@@ -67,6 +68,8 @@ section{
     text-align: center;
     z-index: -2;
 }
+.art-empty-padd3{padding-bottom: 3rem;}
+.art-empty-padd4t{padding-top: 4rem;}
 .art-empty h2{color:rgb(225, 225, 225);text-shadow: 1px 1px 1px black;}
 .art-empty .container{
     display: flex;

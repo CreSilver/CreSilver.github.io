@@ -11,9 +11,8 @@ header .nav1{
     overflow: hidden;
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     min-width: 13rem;
-    max-width: 13rem;
 }
 header .nav1 li a{
     text-decoration: none;
