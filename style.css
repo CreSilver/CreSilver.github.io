@@ -15,6 +15,7 @@ body{
     height: 100vh;
     object-fit: cover;
 }
+button{cursor: pointer;}
 
 
 
@@ -84,7 +85,7 @@ section{
 }
 .art-empty .cont-text{padding: 1rem;}
 .art-empty .cont-text p{margin: 0 0 1rem 0;}
-.art-empty .cont-text a{margin: 0 0 5rem 0;}
+.art-empty .cont-text div{margin: 2rem 0 0 0;}
 .art-empty h3{
     padding: 1rem;
     margin-top: 25%;
