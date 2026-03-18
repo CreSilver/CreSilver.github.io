@@ -60,6 +60,11 @@ section{
 .art-empty{
     display: flex;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4rem 0 2rem 0;
+    color: rgb(225, 225, 225);
+    text-align: center;
+    z-index: -2;
 }
 .art-empty h2{color:rgb(225, 225, 225);text-shadow: 1px 1px 1px black;}
 .art-empty .container{
@@ -96,12 +101,6 @@ section{
 }
 .container a:hover{
     background: rgb(24, 24, 24);
-}
-.art-empty .p{
-    color: rgb(225, 225, 225);
-    text-align: center;
-    text-shadow: 1px 1px 1px black;
-    padding-bottom: 4rem;
 }
 
 
@@ -193,8 +192,10 @@ section{
     color: rgb(24, 24, 24);
     background: rgb(225, 225, 225);
 }
-.galery{color: rgb(24, 24, 24);}
-.galery{text-align: right;}
+.galery{
+    color: rgb(24, 24, 24);
+    text-align: right;
+    }
 .galery a{
     color: rgb(225, 225, 225);
     font-weight: 700;
