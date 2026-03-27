@@ -1,3 +1,4 @@
+/* Main */
 html {scroll-behavior: smooth;}
 body{
     display: flex;
@@ -15,45 +16,149 @@ body{
     height: 100vh;
     object-fit: cover;
 }
-
-
-
-
-/* Main */
-h1{text-shadow: 1px 1px 1px black;}
-.SecondSection{margin-top: 35vh;}
-section h2{text-align: center;}
 button{cursor: pointer;}
-.TextShadowBlack{text-shadow: 1px 1px 1px black;}
 section{
     position: relative;
     overflow: hidden;
 }
-
-
-
-.MainSection{
-    z-index: -99;
-    text-align: center;
+section h2{text-align: center;}
+.a{
+    text-decoration: none;
     color: rgb(225, 225, 225);
-    margin-top: 15%;
-    margin-left: 50%;
-    transform:translateY(-50%);
-    transform:translateX(-50%);
+    border-radius: 1rem;
+    background: #2d844c;
+    padding: 1rem;
+    transition: all 0.3s;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
 }
-.MainSection h1{font-size: 5rem;}
-.MainSection .MainSection-text{font-size: 2rem;}
-.MainSection .MainSection-space{
-    height: 0.2rem;
-    width: 25rem;
-    background-color: rgb(225, 225, 225);
-    margin: -3rem 0 0 50%;
-    transform:translateX(-50%);
+.a:hover{
+    background: rgb(24, 24, 24);
+}
+.TextShadowBlack{text-shadow: 1px 1px 1px black;}
+.magint3{margin-top: -3rem;}
+.vissible{visibility:visible;opacity: 100;}
+.notvissible{visibility: hidden;opacity: 0;}
+.LoadAnimation{
+    opacity: 0;
+    animation: slideInDown 0.5s ease-out forwards;
+    -webkit-keyframes: slideInDown 0.5s ease-out forwards;
 }
 
 
 
 
+
+/* Anmations */
+@keyframes swing{
+    0%{transform:rotate(0deg)}
+    50%{transform:rotate(-6deg)}
+    100%{transform:rotate(0deg)}
+}
+@-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(0deg)}
+    50%{-webkit-transform:rotate(-6deg)}
+    100%{-webkit-transform:rotate(0deg)}
+}
+@keyframes shakeX {
+    0% { transform: translateX(0);}
+    25% { transform: translateX(8px);}
+    50% { transform: translateX(-8px);}
+    75% { transform: translateX(8px);}
+    100% { transform: translateX(0);}
+}
+@-webkit-keyframes shakeX {
+    0% { transform: translateX(0);}
+    25% { transform: translateX(8px);}
+    50% { transform: translateX(-8px);}
+    75% { transform: translateX(8px);}
+    100% { transform: translateX(0);}
+}
+@keyframes slideInDown {
+    0% {opacity: 0;transform: translateY(-30px);}
+    100% {opacity: 1;transform: translateY(0);}
+}
+@-webkit-keyframes slideInDown {
+    0% {opacity: 0;transform: translateY(-30px);}
+    100% {opacity: 1;transform: translateY(0);}
+}
+
+
+
+
+/* First Section */
+.MainSection{
+    color: rgb(225, 225, 225);
+    padding: 20vh 8vw 20vh 8vw;
+    min-height: 40vh;
+}
+.MainSection img{border-radius: 1rem;}
+.MainSection h1{
+    font-size: 5rem;
+    text-shadow: 1px 1px 5px black;
+}
+.MainSection .MainSection-text{
+    font-size: 2rem;
+    text-shadow: 1px 1px 5px black;
+    margin-top: -2rem;
+}
+.MainSection .MainSection-text::before{
+    content: "";
+    position: absolute;
+    margin-top: -1rem;
+    height: 0.3rem;
+    width: 20rem;
+    background: rgb(225, 225, 225);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.MainSection-wholeText{
+    height: 10rem;
+}
+.MainSection-wholeText:hover{
+    animation: shakeX 2.5s infinite;
+    -webkit-keyframes: shakeX 2.5s infinite;
+}
+
+
+
+
+/* Second Section*/
+.art-light{
+    background: rgb(225, 225, 225);
+    color: rgb(24, 24, 24);
+    padding: 3.5rem 8vw 2rem 8vw;
+    clip-path: polygon(100% 100%, 0% 100%, 0% 2rem, 100% 0%);
+}
+.art-light::before{
+    content: "";
+    position: absolute;
+    margin-left: -8vw;
+    margin-top: -3.5rem;
+    height: 3rem;
+    width: 100%;
+    background: #2d844c;
+    clip-path: polygon(100% 1rem, 0% 100%, 0% 2rem, 100% 0%);
+}
+.art-dark{
+    background: #181818;
+    color: rgb(225, 225, 225);
+    padding: 2rem 8vw 2rem 8vw;
+    clip-path: polygon(100% 93%, 0% 100%, 0% 0%, 100% 0%);
+}
+
+
+
+
+.line::before{
+    content: "";
+    position: absolute;
+    margin-left: -8vw;
+    margin-top: -3.5rem;
+    height: 4.2rem;
+    width: 100%;
+    background: #2d844c;
+    clip-path: polygon(100% 1rem, 0% 85%, 0% 2.5rem, 100% 0%);
+}
 .space-for-container{
     display: flex;
     flex-wrap: wrap;
@@ -63,7 +168,7 @@ section{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 2rem 6.75vw 2rem 6.75vw;
+    padding: 2rem 8vw 2rem 8vw;
     color: rgb(225, 225, 225);
     text-align: center;
     z-index: -2;
@@ -94,105 +199,19 @@ section{
     margin-top: 25%;
     transform:translateY(-25%);
 }
-.container a{
-    text-decoration: none;
-    color: rgb(225, 225, 225);
-    border-radius: 1rem;
-    background: #2d844c;
-    padding: 1rem;
-    transition: all 0.3s;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-.container a:hover{
-    background: rgb(24, 24, 24);
-}
 
-
-
-
-.art-light{
-    background: rgb(225, 225, 225);
-    color: rgb(24, 24, 24);
-    padding: 1.2rem 8vw 1.2rem 8vw;
-    margin-top: 2vw;
-}
-.art-light img{
-    z-index: 11;
-    border-radius: 2rem;
-    padding: 1rem 1rem 1rem 1rem;
-}
-.art-dark{
-    background: rgb(24, 24, 24);
-    color: rgb(225, 225, 225);
-    padding: 2rem 8vw 2rem 8vw;
-}
-
-
-
-
-.line-green{
-    overflow: hidden;
-    position: absolute;
-    z-index: 1;
-    width: 130vw;
-    margin-left: -1rem;
-    margin-top: 0.5vw;
-    height: 1rem;
-    background: #2d844c;;
-    rotate: -1deg;
-}
-.line-green2{
-    overflow: hidden;
-    position: absolute;
-    z-index: 1;
-    width: 130vw;
-    margin-left: -1rem;
-    margin-top: 0.5vw;
-    height: 1rem;
-    background: #2d844c;
-    rotate: -1deg;
-}
-.line-white-rotate{
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-    width: 130vw;
-    margin-left: -1rem;
-    margin-top: 0.5vw;
-    height: 3vw;
-    background: rgb(225, 225, 225);
-    rotate: -1deg;
-}
-.line-dark-rotate{
-    background: #313131;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-    width: 130vw;
-    margin-left: -1rem;
-    margin-top: -2.2vw;
-    height: 3vw;
-    rotate: -1deg;
-}
-.line-green-nonerotate{
-    height: 1rem;
-    width: 100%;
-    background: #2d844c;
-}
 
 
 
 
 .github_art{color: rgb(225, 225, 225);}
-.github_art a{
-    color: rgb(225, 225, 225);
-    font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-    border-radius: 1rem;
-    padding: 1rem;
+.github_art::before{
+    content: "";
+    position: absolute;
     background: #2d844c;
-    transition: all 0.3s;
+    width: 100%;
+    height: 1rem;
+    margin-top: -3rem;
 }
 .github_art a:hover{
     color: rgb(24, 24, 24);
@@ -201,19 +220,16 @@ section{
 .galery{
     color: rgb(24, 24, 24);
     text-align: right;
-    }
-.galery a{
-    color: rgb(225, 225, 225);
-    font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-    border-radius: 1rem;
-    padding: 1rem;
-    background: #2d844c;
-    transition: all 0.3s;
 }
-.galery a:hover{
-    background: rgb(24, 24, 24);
+.galery::after {
+  content: "";
+  position: absolute;
+  background: #2d844c;
+  width: 100%;
+  height: 1rem;
+  margin-top: 4rem;
+  display: block;
+  margin-left: -8vw;
 }
 
 
@@ -223,20 +239,50 @@ section{
 /* pc/mobile */
 @media(min-width:957px){
     .galery{
-        padding: 2rem 20rem 4rem 8vw;
+        padding: 2rem 20rem 5rem 8vw;
         background: url(image/photo-camera-3146818425.png), -webkit-linear-gradient(180deg, #ffffff 40%, rgb(225, 225, 225) 60%), linear-gradient(270deg, #ffffff 40%, rgb(225, 225, 225) 60%);
         background-size:contain;
         background-position: right;
         background-repeat: no-repeat;
     }
+    .galery::before{
+        right: -20rem;
+        left: 0;
+    }
     .github_art{
-        padding: 2rem 8vw 4rem 18rem;
+        padding: 3rem 8vw 4rem 18rem;
         background: url(image/github_PNG40-1417037603.png), -webkit-linear-gradient(0deg, #1b1f23 40%, rgb(24, 24, 24) 60%), linear-gradient(90deg, #1b1f23 40%, rgb(24, 24, 24) 60%);
         background-size:contain;
         background-position: left;
         background-repeat: no-repeat;        
     }
+    .github_art::before{margin-left: -18rem;}
+    .MainSection{
+        display: flex;
+        justify-content: space-around;
+    }
+    .MainSection img{
+        width: 25rem;
+        height: 25rem;
+        position: relative;
+        display: block;
+        rotate: 5deg;
+    }
+    .MainSection img:hover{
+        animation: swing 1s infinite;
+        -webkit-animation: swing 1s infinite;
+    }
 }
+
+@media(max-width:780px){
+    .line::before{
+        margin-top: -4rem;
+        height: 4.2rem;
+        clip-path: polygon(100% 1rem, 0% 95%, 0% 3rem, 100% 0%);
+    }
+    .MainSection .MainSection-text::before{opacity: 0;}
+}
+
 @media(min-width:600px){
     .art-light{display: flex;}
     .art-light img{max-height: 11rem;}
@@ -246,17 +292,25 @@ section{
     }
 }
 
-
 @media(max-width:958px){
     .galery{
-        padding: 2rem 8vw 4rem 8vw;
+        padding: 2rem 8vw 5rem 8vw;
         background: -webkit-linear-gradient(180deg, #ffffff 40%, rgb(225, 225, 225) 60%), linear-gradient(270deg, #ffffff 40%, rgb(225, 225, 225) 60%);;
     }
     .github_art{
-        padding: 2rem 8vw 4rem 8vw;
+        padding: 3rem 8vw 4rem 8vw;
         background: -webkit-linear-gradient(0deg, #1b1f23 40%, rgb(24, 24, 24) 60%), linear-gradient(90deg, #1b1f23 40%, rgb(24, 24, 24) 60%);;
     }
+    .github_art::before{margin-left: -8vw;}
+    .MainSection-wholeText{text-align: center;}
+    .MainSection img{
+        margin-left: 50%;
+        margin-top: 6rem;
+        transform: translateX(-50%);
+        max-width: 84vw;
+    }
 }
+
 @media(max-width:601px){
     .art-light img{
         margin-left: 50%;
@@ -264,6 +318,7 @@ section{
         max-width: 80vw;
     }
     .MainSection h1{font-size: 4rem;}
+    .art-empty-padd4t{margin-top: -3rem;}
     .art-empty .container{
         flex-direction: column;
         text-align: center;
@@ -281,4 +336,15 @@ section{
         transform:translateY(0%);
     }
     .art-empty .container .cont-text{margin-top: 1rem;}
+    .art-dark{
+        z-index: 5;
+        position: relative;
+        padding-bottom: 5rem;
+    }
+    .line::before{
+        z-index: 0;
+        margin-top: -6.5rem;
+        height: 6.5rem;
+        clip-path: polygon(100% 3rem, 0% 100%, 0% 0rem, 100% 0%);
+    }
 }

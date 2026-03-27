@@ -1,76 +1,52 @@
+/* HEADER */
 header{
     display: flex;
     justify-content: space-between;
     z-index: 100;
     padding: 0 8vw 0 8vw;
-    text-shadow: 1px 1px 3px black;
+    overflow-x: hidden;
+    max-height: 3.5rem;
     transition: all 0.3s;
 }
-header span{margin-top: 1rem;color:rgb(225, 225, 225)}
-header .nav1{
-    overflow: hidden;
+header span{
+    margin-top: 1rem;
+    color:rgb(225, 225, 225);
+    text-shadow: 1px 1px 3px black;
+}
+header nav{margin-top: -1.5rem;}
+header nav ul{
     list-style: none;
     display: flex;
-    justify-content: space-around;
-    min-width: 13rem;
+    justify-content: space-between;
+    width: 10rem;
 }
-header .nav1 li a{
+header nav ul li{transition: all 0.3s;}
+header nav ul li:hover{transform: scale(1.3);}
+header nav ul:hover li:not(:hover){filter: blur(0.05rem);}
+header nav ul li a{
     text-decoration: none;
-    text-align: right;
-    color: rgb(225, 225, 225);
-    filter: none;
-}
-header .nav1 li button{
-    background: none;
+    color:rgb(225, 225, 225);
     text-shadow: 1px 1px 3px black;
+    font-size: 1.02rem;
+    padding: 0;
+    transition: all 0.3s;
+}
+header nav ul li button{
+    text-decoration: none;
+    color:rgb(225, 225, 225);
+    background-color: rgba(0, 0, 0, 0.0);
+    text-shadow: 1px 1px 3px black;
+    border: 0;
     font-size: 1rem;
-    border: none;
-    text-decoration: none;
-    text-align: right;
-    color: rgb(225, 225, 225);
-    filter: none;
-}
-header .nav1 li {transition: all 0.3s;}
-header .nav1 li:hover{transform: scale(1.3);font-weight: 700;}
-header .nav1 li:hover button{font-weight: 700;}
-
-
-header .nav2{
-    overflow: hidden;
-    background: rgb(225, 225, 225);
-    list-style: none;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 1rem;
-    box-shadow: 2px 2px 2px black;
-    border: 2px solid #2d844c;
-    transition: all 0.3s;
-    transform: scale(1.2) translateX(-1.5rem) translateY(1rem);
-}
-header .nav2 li{
-    margin: 0.5rem 0 0 -50%;
-    transform: translateX(34%);
-    padding: 1.5rem 1rem 2rem 1rem;
-    width: 100%;
-}
-header .nav2 li a{
-    text-decoration: none;
-    text-align: center;
-    color: rgb(225, 225, 225);
-    padding: 1rem 1rem 1rem 1rem;
-    border-radius: 1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    background:#2d844c;
-    font-weight: 700;
+    padding: 0;
     transition: all 0.3s;
 }
-header .nav2 li:hover a{background: rgb(24, 24, 24);}
-.vissible{visibility:visible;opacity: 100;}
-.notvissible{visibility: hidden;opacity: 0;}
+.nav2{position: fixed;transition: all 0.3s;}
+.nav1{transition: all 0.3s;}
 
 
+
+/* HEADER ON SCROLL */
 .scrl-header{
     width: 84%;
     position: fixed;
@@ -80,33 +56,128 @@ header .nav2 li:hover a{background: rgb(24, 24, 24);}
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     box-shadow: 2px 2px 2px black;
+}
+.scrl-header span{
+    color:rgb(24, 24, 24);
     text-shadow: 0px 0px 0px white;
 }
-.scrl-header span{color:rgb(24, 24, 24)}
 .scrl-header .nav1 li a{
     color: rgb(24, 24, 24);
+    text-shadow: 0px 0px 0px white;
 }
 .scrl-header .nav1 li button{
     color: rgb(24, 24, 24);
     text-shadow: 0px 0px 0px white;
     margin-top: -0.5rem;
 }
-.header-hidden {
-    transform: translateY(-100%);
+.header-hidden {transform: translateY(-100%);}
+
+
+.mobilebut{
+    rotate: 90deg;
+    width: 2rem;
+    height: 2rem;
+    padding-bottom: 0.3rem;
+    background: rgb(225, 225, 225);
+    border-radius: 1rem;
+    border: 0;
+    margin-top: -10rem;
 }
+
+
+/* HEADER ON SMALL DEVICE */
+@media(min-width:370px){
+    header .mobilebut{visibility: hidden;opacity: 0;}
+    .nav2{
+        background: rgb(225, 225, 225);
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        margin-left: -4rem;
+        padding: 3rem 3rem 7rem 3rem;
+        border-radius: 1rem;
+        box-shadow: 1px 1px 5px black;
+    }
+    .nav2 li{position: absolute;}
+    .nav2 .spacetop{margin-top: 8rem;}
+    .nav2 .centerise{margin-left: 0.4rem;}
+}
+@media(max-width:370px){
+    .mobilebut{
+        margin-top: 2rem;
+        margin-left: 75vw;
+    }
+    header nav{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        float: right; 
+    }
+    header .nav1{
+        background: rgb(225, 225, 225);
+        width: 100%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 1rem 2rem 0.5rem 2rem;
+        box-shadow: 2px 2px 2px black;
+    }
+    .nav1 li{padding: 1rem 2rem 1rem 2rem;}
+    .nav1 li a{
+        background: rgb(172, 172, 172);
+        padding: 0.75rem 2rem 0.75rem 2rem;
+        border-radius: 1rem;
+        color: rgb(24, 24, 24);
+        text-shadow: 0px 0px 0px white;
+    }
+    .nav1 li button{
+        background: rgb(172, 172, 172);
+        padding: 0.75rem 2rem 0.75rem 2rem;
+        border-radius: 1rem;
+        color: rgb(24, 24, 24);
+        text-shadow: 0px 0px 0px white;
+    }
+    .nav1 li a:hover{color: rgb(225, 225, 225);background: rgb(24, 24, 24);}
+    .nav1 li button:hover{color: rgb(225, 225, 225);background: rgb(24, 24, 24);}
+    .nav2{
+        margin-top: 14rem;
+        width: 50%;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        background: rgb(172, 172, 172);
+        margin-left: 42%;
+        height: 6rem;
+        padding:2rem 1rem 2rem 2rem;
+        transform: translateX(-50%);
+        border-radius: 1rem;
+        box-shadow: 2px 2px 2px black;
+    }
+    .scrl-header{padding-bottom: 1.2rem;}
+}
+
 
 
 
 
 main{flex: 1;}
 
-
-
-
+/* FOOTER */
 footer{
     text-align: center;
     background-color: rgb(225, 225, 225);
     width: 100vw;
+    padding-top: 1rem;
+}
+footer::before{
+    content: "";
+    height: 1rem;
+    width:100%;
+    position: absolute;
+    background: #2d844c;
+    margin-left: -50%;
+    margin-top: -1rem;
 }
 #backtotop{
     text-decoration: none;

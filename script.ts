@@ -47,8 +47,36 @@ function visibilityList(){
 }
 
 
+
+function mobileMenuBnt(){
+    let bnt = document.getElementById("mobilebut");
+    let nav1 = document.getElementById("nav1");
+
+    if(nav1 && bnt){
+        bnt.addEventListener("click", ()=>{
+            nav1.classList.toggle("notvissible");
+            nav1.classList.toggle("vissible");
+            if(bnt.innerText == '|||'){bnt.textContent = 'X'}
+            else{bnt.textContent = '|||'}
+        })
+    }
+}
+
+
+function checkWidthForMobileNav(){
+    let docWidth:number = document.documentElement.clientWidth
+    let nav1 = document.getElementById("nav1");
+
+    if(docWidth && nav1){
+        if(docWidth<=370){nav1.classList.toggle("notvissible")}
+        else{nav1.classList.toggle("vissible")}
+    }
+}
+
+
+
 function backToTop(){
-    let bnt = document.getElementById("backtotop")
+    let bnt = document.getElementById("backtotop");
 
     if(bnt){
         bnt.addEventListener("click", ()=>{
@@ -70,6 +98,39 @@ function zonerYears(){
 }
 
 
+
+function loadAnimation(){
+    let processedCount = 0;
+
+    const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
+            // Kontrola průniku (isIntersecting)
+            if (entry.isIntersecting) {
+                const element = entry.target as HTMLElement;
+                
+                // Aplikace třídy
+                element.classList.add('LoadAnimation');
+
+                // (Zamezení duplicitní zátěži) + uvolnění funkce z paměti
+                observer.unobserve(element);
+                processedCount++;
+                if (processedCount === elements.length) {
+                    observer.disconnect(); 
+                }
+            }
+        });
+    }, {
+        threshold: 0.15 // Element musí být viditelný z 15 %
+    });
+
+    const elements = document.querySelectorAll<HTMLElement>('p, h2, h3, h4');
+    elements.forEach((el: HTMLElement) => observer.observe(el));
+};
+
+
+document.addEventListener("DOMContentLoaded", checkWidthForMobileNav);
+document.addEventListener("DOMContentLoaded", mobileMenuBnt);
+document.addEventListener("DOMContentLoaded", loadAnimation);
 document.addEventListener("DOMContentLoaded", zonerYears);
 document.addEventListener("DOMContentLoaded", backToTop);
 document.addEventListener("DOMContentLoaded", visibilityList);
