@@ -6,6 +6,7 @@ function changeYearText(){
 }
 
 
+
 function changeHeaderViaScroll(){
     let header = document.getElementById("header")
     let list = document.getElementById("nav2") // set navlist
@@ -32,16 +33,15 @@ function changeHeaderViaScroll(){
 }
 
 
+
 function visibilityList(){
     let list = document.getElementById("nav2")
     let bnt = document.getElementById("btn-list")
 
     if(list && bnt){
         bnt.addEventListener("click", ()=>{
-            // "toggle" changing between "add" and "remove"
             list.classList.toggle("vissible")
             list.classList.toggle("notvissible")
-
         })
     }
 }
@@ -53,6 +53,7 @@ function mobileMenuBnt(){
     let nav1 = document.getElementById("nav1");
 
     if(nav1 && bnt){
+        if(nav1.classList.contains("vissible")){bnt.textContent = 'X'}
         bnt.addEventListener("click", ()=>{
             nav1.classList.toggle("notvissible");
             nav1.classList.toggle("vissible");
@@ -61,6 +62,7 @@ function mobileMenuBnt(){
         })
     }
 }
+
 
 
 function checkWidthForMobileNav(){
@@ -106,10 +108,10 @@ function loadAnimation(){
         entries.forEach((entry: IntersectionObserverEntry) => {
             // Kontrola průniku (isIntersecting)
             if (entry.isIntersecting) {
-                const element = entry.target as HTMLElement;
+                const element = entry.target as HTMLElement
                 
                 // Aplikace třídy
-                element.classList.add('LoadAnimation');
+                element.classList.add('LoadAnimation')
 
                 // (Zamezení duplicitní zátěži) + uvolnění funkce z paměti
                 observer.unobserve(element);
@@ -120,12 +122,14 @@ function loadAnimation(){
             }
         });
     }, {
-        threshold: 0.15 // Element musí být viditelný z 15 %
+        threshold: 0.15 
     });
 
-    const elements = document.querySelectorAll<HTMLElement>('p, h2, h3, h4');
-    elements.forEach((el: HTMLElement) => observer.observe(el));
-};
+    const elements = document.querySelectorAll<HTMLElement>('p, h2, h3, h4')
+    elements.forEach((el: HTMLElement) => observer.observe(el))
+}
+
+
 
 
 document.addEventListener("DOMContentLoaded", checkWidthForMobileNav);

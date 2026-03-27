@@ -35,7 +35,6 @@ function visibilityList() {
     let bnt = document.getElementById("btn-list");
     if (list && bnt) {
         bnt.addEventListener("click", () => {
-            // "toggle" changing between "add" and "remove"
             list.classList.toggle("vissible");
             list.classList.toggle("notvissible");
         });
@@ -45,6 +44,9 @@ function mobileMenuBnt() {
     let bnt = document.getElementById("mobilebut");
     let nav1 = document.getElementById("nav1");
     if (nav1 && bnt) {
+        if (nav1.classList.contains("vissible")) {
+            bnt.textContent = 'X';
+        }
         bnt.addEventListener("click", () => {
             nav1.classList.toggle("notvissible");
             nav1.classList.toggle("vissible");
@@ -103,12 +105,11 @@ function loadAnimation() {
             }
         });
     }, {
-        threshold: 0.15 // Element musí být viditelný z 15 %
+        threshold: 0.15
     });
     const elements = document.querySelectorAll('p, h2, h3, h4');
     elements.forEach((el) => observer.observe(el));
 }
-;
 document.addEventListener("DOMContentLoaded", checkWidthForMobileNav);
 document.addEventListener("DOMContentLoaded", mobileMenuBnt);
 document.addEventListener("DOMContentLoaded", loadAnimation);

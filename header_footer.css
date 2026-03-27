@@ -73,6 +73,8 @@ header nav ul li button{
 .header-hidden {transform: translateY(-100%);}
 
 
+
+/* mobile button */
 .mobilebut{
     rotate: 90deg;
     width: 2rem;
@@ -85,9 +87,10 @@ header nav ul li button{
 }
 
 
+
 /* HEADER ON SMALL DEVICE */
-@media(min-width:370px){
-    header .mobilebut{visibility: hidden;opacity: 0;}
+@media(min-width:370px){ /* pc */
+    .mobilebut{visibility: hidden;opacity: 0;}
     .nav2{
         background: rgb(225, 225, 225);
         display: flex;
@@ -102,11 +105,8 @@ header nav ul li button{
     .nav2 .spacetop{margin-top: 8rem;}
     .nav2 .centerise{margin-left: 0.4rem;}
 }
-@media(max-width:370px){
-    .mobilebut{
-        margin-top: 2rem;
-        margin-left: 75vw;
-    }
+@media(max-width:370px){ /* mobile */
+    .mobilebut{margin-top: 2rem;margin-left: 75vw;}
     header nav{
         display: flex;
         flex-direction: column;
@@ -144,6 +144,7 @@ header nav ul li button{
     .nav2{
         margin-top: 14rem;
         width: 50%;
+        min-width: 10rem;
         justify-content: space-between;
         flex-direction: column-reverse;
         background: rgb(172, 172, 172);
@@ -156,7 +157,6 @@ header nav ul li button{
     }
     .scrl-header{padding-bottom: 1.2rem;}
 }
-
 
 
 
