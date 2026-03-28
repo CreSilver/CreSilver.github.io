@@ -134,10 +134,22 @@ section h2{text-align: center;}
     background: #2d844c;
     clip-path: polygon(100% 1rem, 0% 100%, 0% 2rem, 100% 0%);
 }
-.art-dark{
+.inside-dark{
+    text-align: center;
     background: #181818;
     color: rgb(225, 225, 225);
-    padding: 2rem 8vw 2rem 8vw;
+    padding: 2rem 8vw 3rem 8vw;
+}
+.inside-light{
+    background: rgb(225, 225, 225);
+    color: rgb(24, 24, 24);
+    padding: 2rem 8vw 3rem 8vw;
+}
+.art-dark{
+    text-align: center;
+    background: #181818;
+    color: rgb(225, 225, 225);
+    padding: 2rem 8vw 3rem 8vw;
     clip-path: polygon(100% 93%, 0% 100%, 0% 0%, 100% 0%);
 }
 
