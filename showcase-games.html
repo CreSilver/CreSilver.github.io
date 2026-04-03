@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Meta tags - primary website functions -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="theme-color" content="#2d844c">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <!-- Meta tags - website information -->
+  <meta name="author" content="David Boček">
+  <meta name="keywords" content="profile, personal profile, david boček, games, towerdefense, CatJumper">
+  <meta name="description" content="Project showcase - Games">
+  <meta property="og:url" content="https://cresilver.github.io/showcase-games">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Project showcase - Games">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:description" content="Project showcase - Games">
+  
+
+  <!-- Linked codes -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header_footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/png" href="image/favicon.png" sizes="32x32"> 
+  <meta property="og:image" content="https://cresilver.github.io/image/favicon.png">
+
+
+  <!-- Title & name -->
+  <title>Showcase | David Boček</title>
+  <meta property="og:title" content="Games | David Boček">
+  <meta property="og:site_name" content="David Boček">
+  <meta property="twitter:title" content="Games | David Boček">
+</head>
+
+
+<body>
+  <header id="header">
+    <span><b>Personal</b>Profile</span>
+    <nav>
+      <button class="mobilebut" id="mobilebut">|||</button>
+      <ul class="nav1" id="nav1">
+        <li><button id="btn-list">Portfolio<noscript>(Please enable JavaScript for the full experience)</noscript></button></li>
+        <li><a href="https://www.linkedin.com/in/david-bocek/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+      <ul class="nav2 notvissible" id="nav2">
+        <li><a class="a centerise" href="https://github.com/CreSilver" target="_blank" rel="noopener noreferrer">GitHub (Dev.)</a></li>
+        <li class="spacetop"><a class="a" href="https://silverko.pixieset.com/" target="_blank" rel="noopener noreferrer">Pixieset (Photo)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <main>
+    <div class="imgbaccont-div">
+      <img src="image/gamesShowcaseBack.webp" alt="top_image" class="imgbaccont">
+      <h1>Projects TowerDefense & CatJumper</h1>
+    </div>
+
+
+    <section class="sec-showcase">
+      <h2>TowerDefense</h2>
+      <article>
+        <h3 class="p-showcase">What is it about</h3>
+        <p class="p-showcase">
+          TowerDefense is a simple and also my first game made via SDL2 library in C.
+          It features one tower type, a map, four types of enemies, a coin system, and a speed-scaling system.
+          The game saves your high score and it is possible to win.
+          Every enemy gives you a different amount of coins.
+          Towers can only be placed on specific spots if you have enough coins, and they can also be upgraded.
+          Enemy spawn rates, health, and speed increase every time you complete a wave.
+          The game has only one map and three menus: the Main Menu, Victory Menu, and Game Over Menu.
+        </p>
+      </article>
+      <article>
+        <h3 class="p-showcase">How it is made</h3>
+        <p class="p-showcase">
+          The project structure isn't perfect, mainly because every function is in a header file.
+          The main file contains only the standard logic, like window setup and background rendering.
+          However, I did my best to make the game modular, so adding new functions is quite easy.
+          Also, the game has VSync, so you don't have to worry about the game running at over 1000 FPS.
+        </p>
+      </article>
+      <p class="p-showcase">If you want to try this project, you can find it <a href="https://github.com/CreSilver/TowerDefence-C" target="_blank" rel="noopener noreferrer">HERE</a>.</p>
+    </section>
+
+
+
+    <section class="sec-showcase">
+      <h2>CatJumper</h2>
+      <article>
+        <h3 class="p-showcase">What is it about</h3>
+        <p class="p-showcase">
+          CatJumper is a simple game made with the Godot Engine.
+          The game has a simple menu and map, featuring a lighting mechanic.
+          It is a platformer game, so the player can move left and right, jump, and fall.
+          It has a soundtrack and various sound effects.
+          There are three types of coins, and every coin gives you a different amount of score.
+          Also, the game has simple audio settings.
+          If you complete a level, your score will be saved if it is better than your previous high score.
+          You can also move around in the main menu.
+          The game features five menus: Main Menu, Settings, Level Selector, Level Completion, and Pause Menu.
+        </p>
+      </article>
+      <article>
+        <h3 class="p-showcase">How it is made</h3>
+        <p class="p-showcase">
+          None of the assets are mine.
+          I downloaded every asset (if I remember correctly) from itch.io as a free version.
+          The game has adaptive VSync to set an FPS limit.
+          This project is older than Tower Defense, and at that time,
+          I didn't know how to make the game as modular as I can now.
+          Not gonna lie, the code is a bit of a spaghetti mess.
+        </p>
+      </article>
+      <p class="p-showcase">If you want to try this project, you can find it <a href="https://github.com/CreSilver/cat-jumper" target="_blank" rel="noopener noreferrer">HERE</a>.</p>
+    </section>
+
+    <section class="sec-showcase">
+      <h2>Some images</h2>
+      <article class="img-showcase-galery">
+        <div><img alt="CatJumper Screen" src="image/CatJumper.webp"></div>
+        <div><img alt="TowerDefense Screen" src="image/TowerDefense.webp"></div>
+      </article>
+    </section>
+  </main>
+
+
+
+  <footer>
+    <div class="line-green-nonerotate"></div>
+    <p><button id="backtotop">Back to top</button><noscript>(Please enable JavaScript for the full experience)</noscript></p>
+    <p>
+      <strong>&copy; <span id="year">2026</span> David Boček</strong>. All rights reserved.
+      <noscript>(Please enable JavaScript for the full experience)</noscript>
+    </p>
+  </footer>
+</body>
+</html>

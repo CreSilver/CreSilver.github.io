@@ -107,7 +107,8 @@ function loadAnimation() {
     }, {
         threshold: 0.15
     });
-    const elements = document.querySelectorAll('p, h2, h3, h4');
+    let elements = document.querySelectorAll('p, h2, h3, h4');
+    elements.forEach((el) => el.classList.add('zeroopacity'));
     elements.forEach((el) => observer.observe(el));
 }
 document.addEventListener("DOMContentLoaded", checkWidthForMobileNav);

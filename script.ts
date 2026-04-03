@@ -57,7 +57,7 @@ function mobileMenuBnt(){
         bnt.addEventListener("click", ()=>{
             nav1.classList.toggle("notvissible");
             nav1.classList.toggle("vissible");
-            if(bnt.innerText == '|||'){bnt.textContent = 'X'}
+            if(bnt.innerText == '|||'){bnt.textContent = 'X'} // fix, now visible nav will always show X
             else{bnt.textContent = '|||'}
         })
     }
@@ -106,7 +106,7 @@ function loadAnimation(){
 
     const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry: IntersectionObserverEntry) => {
-            // Kontrola průniku (isIntersecting)
+
             if (entry.isIntersecting) {
                 const element = entry.target as HTMLElement
                 
@@ -125,7 +125,8 @@ function loadAnimation(){
         threshold: 0.15 
     });
 
-    const elements = document.querySelectorAll<HTMLElement>('p, h2, h3, h4')
+    let elements = document.querySelectorAll<HTMLElement>('p, h2, h3, h4')
+    elements.forEach((el) => el.classList.add('zeroopacity')) // Fix element opacity on scroll is 100 and flick to 0 to anim.
     elements.forEach((el: HTMLElement) => observer.observe(el))
 }
 

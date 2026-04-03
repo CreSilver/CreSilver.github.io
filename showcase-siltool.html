@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Meta tags - primary website functions -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="theme-color" content="#2d844c">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <!-- Meta tags - website information -->
+  <meta name="author" content="David Boček">
+  <meta name="keywords" content="profile, personal profile, david boček, SilverTool">
+  <meta name="description" content="Project showcase - SilverTool">
+  <meta property="og:url" content="https://cresilver.github.io/showcase-siltool">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Project showcse - SilverTool.">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:description" content="Project show - SilverTool.">
+  
+
+  <!-- Linked codes -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header_footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/png" href="image/favicon.png" sizes="32x32"> 
+  <meta property="og:image" content="https://cresilver.github.io/image/favicon.png">
+
+
+  <!-- Title & name -->
+  <title>Showcase | David Boček</title>
+  <meta property="og:title" content="SilverTool | David Boček">
+  <meta property="og:site_name" content="SilverTool">
+  <meta property="twitter:title" content="SilverTool | David Boček">
+</head>
+
+
+<body>
+  <header id="header">
+    <span><b>Personal</b>Profile</span>
+    <nav>
+      <button class="mobilebut" id="mobilebut">|||</button>
+      <ul class="nav1" id="nav1">
+        <li><button id="btn-list">Portfolio<noscript>(Please enable JavaScript for the full experience)</noscript></button></li>
+        <li><a href="https://www.linkedin.com/in/david-bocek/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+      <ul class="nav2 notvissible" id="nav2">
+        <li><a class="a centerise" href="https://github.com/CreSilver" target="_blank" rel="noopener noreferrer">GitHub (Dev.)</a></li>
+        <li class="spacetop"><a class="a" href="https://silverko.pixieset.com/" target="_blank" rel="noopener noreferrer">Pixieset (Photo)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <main>
+    <div class="imgbaccont-div">
+        <img src="image/siltool.webp" alt="top_image" class="imgbaccont">
+        <h1>Project SilverTool Prototyp</h1>
+    </div>
+    
+
+    <section class="sec-showcase">
+        <article>
+            <h2>What is SilverTool</h2>
+            <p class="p-showcase">
+                SilverTool Prototyp is my first classic application.
+                t was developed using the Qt framework in C++.
+                I wanted a small and simple piece of software that could open and read my documentation in one place.
+                I decided to write the documentation in HTML.
+                For rendering, I used QWebEngine, which uses the Chromium core for fast web rendering and full support of HTML5 and CSS3.
+                In this point adding new documents will be easy.
+            </p>
+        </article>
+
+
+        <article>
+            <h2>What can it do</h2>
+            <p class="p-showcase">
+                It can open web documents with full HTML5, CSS3 and JavaScript support.
+                Also, it has two tools.
+                Tools are: Converter for metric and imperial units, and ColorTool for converting between HEX, HSV and RGB.
+                This tool have specifically three documentation sections: Compilation, C/C++ and Assembly.
+                Any text in documentation can be copied and used.
+                It also features an action bar with refresh and back buttons. So, if you decide to edit any documents, you don't have to restart the whole application to see the result.
+            </p>
+        </article>
+
+
+        <article>
+            <h2>How it is work</h2>
+            <p class="p-showcase">
+                Program has 5 cpp files and 4 hpp files, 7 HTML files, one CSS file and one CMake file.
+                The structure of the program is simple.
+                Everything is side by side.
+            </p>
+            <div>
+                <ul>
+                    <li>main.cpp</li>
+                    <li>window.cpp</li>
+                    <li>window.hpp</li>
+                    <li>sidebar.cpp</li>
+                    <li>sidebar.hpp</li>
+                    <li>actionbar.cpp</li>
+                    <li>actionbar.hpp</li>
+                    <li>tools.cpp</li>
+                    <li>tools.hpp</li>
+                </ul>
+                <img src="image/siltool_struc.png" alt="structure of sillvertool" class="sillvertool_structure">
+            </div>
+            <p class="p-showcase">
+                main.cpp has only one include and that is <code>#include "window.hpp"</code>.
+                Also, it is stating file.
+                That mean it has only main function.
+            </p>
+            <p class="p-showcase">
+                Every another cpp file have only implementation and every another hpp file have class declaration.
+                Specifically window files calling another file, creating window, creating application layout and starting QWebEngine.
+                I did my best to separate everything in functions, but still it is my first application.
+            </p>
+        </article>
+
+        <br>
+        <p class="p-showcase">If you want to try this project, reedit it, change it for yourself or just use it as template, you can find it <a href="https://github.com/CreSilver/SilTool" target="_blank" rel="noopener noreferrer">HERE</a>.</p>
+    </section>
+  </main>
+
+
+
+  <footer>
+    <div class="line-green-nonerotate"></div>
+    <p><button id="backtotop">Back to top</button><noscript>(Please enable JavaScript for the full experience)</noscript></p>
+    <p>
+      <strong>&copy; <span id="year">2026</span> David Boček</strong>. All rights reserved.
+      <noscript>(Please enable JavaScript for the full experience)</noscript>
+    </p>
+  </footer>
+</body>
+</html>
