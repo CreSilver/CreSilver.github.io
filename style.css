@@ -347,10 +347,11 @@ section h2{text-align: center;}
     }
     .MainSection .MainSection-text::before{opacity: 0;}
 
+    /* showcase */
     .imgbaccont{height: 100vh;}
     .imgbaccont-div{height: 100vh;}
     .imgbaccont-div h1{
-        margin-top: -20rem;
+        margin-top: -65vh;
         font-size: 3em;
     }
 }
